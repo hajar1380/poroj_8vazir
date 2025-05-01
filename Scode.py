@@ -10,6 +10,10 @@ def fitness(chromosome):
                 clashes += 1
     return clashes
 
+# تولید جمعیت اولیه
+def create_population(population_size, n):
+    return [create_chromosome(n) for _ in range(population_size)]
+
 # تولید کروموزوم اولیه به صورت تصادفی
 def create_chromosome(n):
     return [random.randint(0, n - 1) for _ in range(n)]
